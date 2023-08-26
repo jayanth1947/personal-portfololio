@@ -1,4 +1,4 @@
-import { LightningElement, wire } from 'lwc';
+import { LightningElement, wire,api } from 'lwc';
 import PortfolioAssets from '@salesforce/resourceUrl/PortfolioAssets';
 import { getRecord,getFieldValue } from 'lightning/uiRecordApi';
 import FULLNAME from '@salesforce/schema/Portfolio__c.FullName__c';
@@ -8,16 +8,21 @@ import DESIGNATION from '@salesforce/schema/Portfolio__c.Designation__c';
 
 export default class PortfolioBanner extends LightningElement {
 
-    linkedinUrl= 'https://www.linkedin.com/in/onteru-jayanth'
-    githubUrl='https://github.com/jayanth1947';
-    trailheadUrl='https://www.salesforce.com/trailblazer/jonteru';
+     @api recordId //='a0s5h000001uIjWAAU';
+     @api linkedinUrl //= 'https://www.linkedin.com/in/onteru-jayanth'
+     @api twitterUrl //= 'https://twitter.com/karkra_nikhil'
+     @api githubUrl //='https://github.com/jayanth1947';
+     @api youtubeUrl //= 'https://youtube.com/salesforcetroop'
+     @api trailheadUrl //='https://www.salesforce.com/trailblazer/jonteru';
 
     userPic=`${PortfolioAssets}/PortfolioAssets/userPic.jpeg`
     linkedin =`${PortfolioAssets}/PortfolioAssets/Social/linkedin.svg`
+    twitter = `${PortfolioAssets}/PortfolioAssets/Social/twitter.svg`
     github =`${PortfolioAssets}/PortfolioAssets/Social/github.svg`
+    youtube = `${PortfolioAssets}/PortfolioAssets/Social/youtube.svg`
     trailhead =`${PortfolioAssets}/PortfolioAssets/Social/trailhead1.svg`
 
-    recordId='a0s5h000001uIjWAAU';
+    
     @wire(getRecord, {recordId:'$recordId', fields:[FULLNAME,COMPANYLOCATION,COMPANYNAME,DESIGNATION]})
 
     portfolioData
