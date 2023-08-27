@@ -2,3 +2,9 @@
     background: #878b88;
     padding: 16px;
 }
+
+@media (max-width:720px) {
+    .userDetailAndStatsWrapper{
+        text-align: center;
+    }
+}
