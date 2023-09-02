@@ -1,7 +1,9 @@
 <template>
     <lightning-tabset variant="scoped" class="tab-active">
         <lightning-tab label="Summary">
-            Summary Content !
+            <template if:true={recordId}>
+                <c-portfolio-summary record-id={recordId} object-api-name={objectApiName}></c-portfolio-summary>
+            </template>
         </lightning-tab>
         <lightning-tab label="Work Experience">
             Work Experience Content !
