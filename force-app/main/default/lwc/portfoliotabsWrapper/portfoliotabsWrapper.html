@@ -38,7 +38,9 @@
 
         
         <lightning-tab label="Others">
-            Other Content !
+            <template if:true={recordId}>
+                <c-portfolio-other-details record-id={recordId}></c-portfolio-other-details>
+            </template>
         </lightning-tab>
         
     </lightning-tabset>
