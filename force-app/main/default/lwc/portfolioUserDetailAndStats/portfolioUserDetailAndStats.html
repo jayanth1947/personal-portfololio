@@ -1,24 +1,31 @@
 <template>
+    <!-- Wrapper div for user details and statistics -->
     <div class="userDetailAndStatsWrapper">
         <lightning-layout multiple-rows>
+            <!-- Layout item for user details -->
             <lightning-layout-item size="12">
                 <template if:true={recordId}>
+                    <!-- For displaying user details -->
                     <c-portfolio-user-details
-                record-id={recordId}
-                object-api-name={objectApiName}
-                resume-url={resumeUrl} ></c-portfolio-user-details>
+                        record-id={recordId}
+                        object-api-name={objectApiName}
+                        resume-url={resumeUrl} >
+                    </c-portfolio-user-details>
                 </template>
             </lightning-layout-item>
+
             <lightning-layout-item size="12">
                 <template if:true={recordId}>
+                    <!-- For displaying user stats -->
                     <c-portfolio-user-stats
-                rank={rank}
-                badges={badges}
-                points={points}
-                trails={trails}></c-portfolio-user-stats>
-                </template>
-                
+                        rank={rank}
+                        badges={badges}
+                        points={points}
+                        trails={trails}>
+                    </c-portfolio-user-stats>
+                </template>    
             </lightning-layout-item>
         </lightning-layout>
     </div>
+
 </template>
