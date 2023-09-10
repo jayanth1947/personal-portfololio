@@ -1,3 +1,4 @@
+/* Styling for 'h2' elements */
 h2{
     background: #16325c;
     color: #fff;
@@ -6,6 +7,7 @@ h2{
     font-size: 18px;
 }
 
+/* Custom styling for 'slds-badge' elements */
 .slds-badge{
     --slds-c-badge-color-background: #f6c403;
     --slds-c-badge-text-color:#000000;
