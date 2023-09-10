@@ -5,6 +5,7 @@
 
 @media (max-width:720px) {
     .userDetailAndStatsWrapper{
+        /* Center-align the content within the wrapper on screens with a maximum width of 720px */
         text-align: center;
     }
 }
