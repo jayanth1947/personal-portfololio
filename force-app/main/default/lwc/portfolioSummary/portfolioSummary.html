@@ -1,14 +1,19 @@
 <template>
+
+    <!-- Use the 'lightning-record-view-form' component to display record details -->
     <lightning-record-view-form
       density="comfy"
       object-api-name={objectApiName}
       record-id={recordId}>
+      <!-- Create a layout item with a size of 12 (full width) -->
       <lightning-layout-item size="12">
+        <!-- Display an output field for the 'Summary__c' field -->
         <lightning-output-field 
           field-name="Summary__c"
-          variant="label-hidden"
-        ></lightning-output-field>
-      </lightning-layout-item>
-      
+          variant="label-hidden">
+        </lightning-output-field>
+      </lightning-layout-item> 
+        
     </lightning-record-view-form>
+
 </template>
