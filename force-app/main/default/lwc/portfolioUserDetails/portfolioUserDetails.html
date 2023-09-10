@@ -1,9 +1,12 @@
 <template>
+
+    <!-- Lightning Record View Form component for displaying record details -->
     <lightning-record-view-form
       density="comfy"
       object-api-name={objectApiName}
-      record-id={recordId}
-    >
+      record-id={recordId}>
+
+       <!-- Layout for arranging fields in rows -->
       <lightning-layout  multiple-rows>
             <lightning-layout-item size="12" small-device-size="4" medium-device-size="3">
                 <lightning-output-field class="email" field-name="Email__c"></lightning-output-field>
@@ -15,14 +18,16 @@
                 <lightning-output-field field-name="Address__c"></lightning-output-field>
             </lightning-layout-item>
             
+            <!-- Button for Downloading Resume -->
             <lightning-layout-item size="12" small-device-size="4" medium-device-size="3">
                 <lightning-button class="slds-var-m-left_small slds-var-m-bottom_medium"
                   variant="brand"
                   label="Download Resume" 
                   icon-name="action:download"
-                  onclick={downloadResume} 
-                ></lightning-button>
+                  onclick={downloadResume}>
+                </lightning-button>
             </lightning-layout-item>
       </lightning-layout>
     </lightning-record-view-form>    
+
 </template>
