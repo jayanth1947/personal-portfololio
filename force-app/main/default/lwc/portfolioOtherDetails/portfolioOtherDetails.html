@@ -1,5 +1,9 @@
 <template>
+
+    <!-- Section for displaying Awards -->
     <h2 class="slds-var-m-bottom_medium">Awards</h2>
+
+    <!-- Lightning layout to organize and display awards -->
     <lightning-layout multiple-rows>
         <template for:each={awards} for:item="award">
             <lightning-layout-item key={award} size="12" padding="around-small" small-device-size="6" medium-device-size="4" large-device-size="3" >
@@ -11,7 +15,10 @@
         </template>
     </lightning-layout>
 
+    <!-- Section for displaying Super Badges -->
     <h2 class="slds-var-m-bottom_medium">Super Badges</h2>
+
+    <!-- Lightning layout to organize and display super badges -->
     <lightning-layout multiple-rows>
         <template for:each={superBadges} for:item="badge">
             <lightning-layout-item key={badge} size="12" padding="around-small" small-device-size="6" medium-device-size="4" large-device-size="3" >
@@ -23,7 +30,10 @@
         </template>
     </lightning-layout>
 
+    <!-- Section for displaying Languages -->
     <h2 class="slds-var-m-bottom_medium">Languages</h2>
+
+    <!-- Lightning layout to organize and display languages -->
     <lightning-layout multiple-rows>
         <template for:each={languages} for:item="lang">
             <lightning-layout-item key={lang} size="12" padding="around-small" small-device-size="6" medium-device-size="4" large-device-size="3" >
@@ -34,4 +44,5 @@
             </lightning-layout-item>
         </template>
     </lightning-layout>
+
 </template>
