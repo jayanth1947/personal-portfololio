@@ -1,8 +1,10 @@
+/* CSS styles for the image */
 img{
     height: 60px;
     margin-right: 16px;
 }
 
+/* CSS styles for certification boxes */
 .cert-box{
     padding: 12px;
     background: #ffdf7b;
@@ -13,6 +15,7 @@ img{
     justify-content: left;
 }
 
+/* CSS styles for h2 headings */
 h2{
     background: #16325c;
     color: #fff;
@@ -21,6 +24,7 @@ h2{
     font-size: 18px;
 }
 
+/* CSS styles for certification boxes when hovered */
 .cert-box:hover{
     background-color: #d8d8d8;
     cursor: pointer;
