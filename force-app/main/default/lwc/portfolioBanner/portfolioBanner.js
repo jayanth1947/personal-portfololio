@@ -8,13 +8,16 @@ import DESIGNATION from '@salesforce/schema/Portfolio__c.Designation__c';
 
 export default class PortfolioBanner extends LightningElement {
 
+    // Expose component properties as API properties to allow customization in the Lightning App Builder
      @api recordId //='a0s5h000001uIjWAAU';
      @api linkedinUrl //= 'https://www.linkedin.com/in/onteru-jayanth'
-     @api twitterUrl //= 'https://twitter.com/karkra_nikhil'
+     @api twitterUrl //= 'https://twitter.com/onteru-jayanth'
      @api githubUrl //='https://github.com/jayanth1947';
-     @api youtubeUrl //= 'https://youtube.com/salesforcetroop'
+     @api youtubeUrl //= 'https://youtube.com/jayanth-onteru'
      @api trailheadUrl //='https://www.salesforce.com/trailblazer/jonteru';
 
+
+    // Define image URLs using Salesforce Static Resources
     userPic=`${PortfolioAssets}/PortfolioAssets/userPic.jpeg`
     linkedin =`${PortfolioAssets}/PortfolioAssets/Social/linkedin.svg`
     twitter = `${PortfolioAssets}/PortfolioAssets/Social/twitter.svg`
@@ -22,9 +25,8 @@ export default class PortfolioBanner extends LightningElement {
     youtube = `${PortfolioAssets}/PortfolioAssets/Social/youtube.svg`
     trailhead =`${PortfolioAssets}/PortfolioAssets/Social/trailhead1.svg`
 
-    
+    // Wire service to fetch record data based on the provided recordId and specified fields
     @wire(getRecord, {recordId:'$recordId', fields:[FULLNAME,COMPANYLOCATION,COMPANYNAME,DESIGNATION]})
-
     portfolioData
     // portfolioHandler({data,error}){
     //     if(data){
@@ -36,6 +38,7 @@ export default class PortfolioBanner extends LightningElement {
     // }
 
 
+    // Getter methods to retrieve specific field values from the fetched record data
     get fullName(){
         return getFieldValue(this.portfolioData.data, FULLNAME)
     }
@@ -51,7 +54,5 @@ export default class PortfolioBanner extends LightningElement {
     get designation(){
         return getFieldValue(this.portfolioData.data, DESIGNATION)
     }
-
-    
 
 }
