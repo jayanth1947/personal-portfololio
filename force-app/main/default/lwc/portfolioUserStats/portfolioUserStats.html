@@ -1,25 +1,32 @@
 <template>
+     <!-- Define a Lightning Layout with multiple rows -->
     <lightning-layout  multiple-rows>
+        <!-- Layout item for Trailhead ranking image -->
         <lightning-layout-item size="12" small-device-size="4" medium-device-size="3">
             <img src={trailheadRanking} alt="Trailhead Badge"/>
         </lightning-layout-item>
+        <!-- Layout item for Badges -->
         <lightning-layout-item size="12" small-device-size="4" medium-device-size="3">
             <div>
                 <h3>Badges</h3>
                 <p>{badges}</p>
             </div>
         </lightning-layout-item>
+        <!-- Layout item for Points -->
         <lightning-layout-item size="12" small-device-size="4" medium-device-size="3">
             <div>
                 <h3>Points</h3>
                 <p>{points}</p>
             </div>
         </lightning-layout-item>
+        <!-- Layout item for Trails -->
         <lightning-layout-item size="12" small-device-size="4" medium-device-size="3">
             <div>
                 <h3>Trails</h3>
                 <p>{trails}</p>
             </div>
         </lightning-layout-item>
+
     </lightning-layout>
+
 </template>
