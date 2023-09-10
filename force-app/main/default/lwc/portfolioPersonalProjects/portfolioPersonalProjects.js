@@ -3,12 +3,14 @@ import PortfolioAssets from '@salesforce/resourceUrl/PortfolioAssets';
 
 export default class PortfolioPersonalProjects extends LightningElement {
 
+    // Define resource URLs for project images using PortfolioAssets
     BMICalculator= `${PortfolioAssets}/PortfolioAssets/Projects/BMICalculator.png`
     AlarmClock= `${PortfolioAssets}/PortfolioAssets/Projects/AlarmClock.png`
     CurrencyCalculator= `${PortfolioAssets}/PortfolioAssets/Projects/CurrencyCalculator.png`
     WeatherApp= `${PortfolioAssets}/PortfolioAssets/Projects/WeatherApp.png`
     SurveyApp= `${PortfolioAssets}/PortfolioAssets/Projects/Survey.png`
 
+    // Define an array of project objects, each with a name, image, and link
     projects=[
         {
             "name" :"BMI Calculator App",
