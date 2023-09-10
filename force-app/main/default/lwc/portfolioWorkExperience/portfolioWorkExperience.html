@@ -1,5 +1,6 @@
 <template>
     <ul class="slds-timeline">
+        <!-- Loop through workExperienceList and create timeline items -->
         <template for:each={workExperienceList} for:item="work">
             <li key={work.id}>
                 <div class="slds-timeline__item_expandable slds-timeline__item_task slds-is-open">
