@@ -1,26 +1,33 @@
+/* Define custom styling for the 'tab-active' class */
 .tab-active{
     --slds-c-tabs-item-color-border-hover: #f6c403;
 }
 
+/* Styling for the 'accordian-wrapper' class */
 .accordian-wrapper{
     background: #fff;
 }
 
+/* Styling for displaying tabs on desktop view */
 .show-tabs-on-desktop-view{
     display: block;
 }
 
+/* Styling for displaying the accordion on mobile view */
 .show-accordion-on-mobile-view{
     display: none;
 }
 
+/* Media query for responsive design when the screen width is less than or equal to 1024px */
 @media (max-width:1024px) {
+
+    /* Hide tabs on desktop view when the screen width is less than or equal to 1024px */
     .show-tabs-on-desktop-view{
         display: none;
     }
+    /* Display the accordion on mobile view when the screen width is less than or equal to 1024px */
     .show-accordion-on-mobile-view{
         display: block;
     }
     
-
 }

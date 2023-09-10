@@ -1,43 +1,54 @@
 <template>
+
+     <!--
+        This template defines a component that displays information about a portfolio.
+        It includes two views: desktop view using lightning-tabset and mobile view using lightning-accordion.
+    -->
     <div class="show-tabs-on-desktop-view">
+        <!-- Desktop view: Tabset for displaying content in tabs -->
         <lightning-tabset variant="scoped" class="tab-active">
+            <!-- Tab for displaying 'Summary' information -->
             <lightning-tab label="Summary">
                 <template if:true={recordId}>
+                    <!-- Display the 'c-portfolio-summary' component with 'record-id' and 'object-api-name' attributes -->
                     <c-portfolio-summary record-id={recordId} object-api-name={objectApiName}></c-portfolio-summary>
                 </template>
             </lightning-tab>
     
+            <!-- Displays Work Experience tab -->
             <lightning-tab label="Work Experience">
                 <template if:true={recordId}>
                     <c-portfolio-work-experience record-id={recordId}></c-portfolio-work-experience>
                 </template>
             </lightning-tab>
     
+            <!-- Displays Personal Projects tab -->
             <lightning-tab label="Personal Projects">
                 <c-portfolio-personal-projects></c-portfolio-personal-projects>
             </lightning-tab>
     
+            <!-- Displays Skills tab -->
             <lightning-tab label="Skills">
                 <template if:true={recordId}>
                     <c-portfolio-skills record-id={recordId}></c-portfolio-skills>
                 </template>
             </lightning-tab>
             
-            
+            <!-- Displays Education tab -->
             <lightning-tab label="Education">
                 <template if:true={recordId}>
                     <c-portfolio-education record-id={recordId}></c-portfolio-education>
                 </template>       
             </lightning-tab>
     
-    
+            <!-- Displays Certifications tab -->
             <lightning-tab label="Certifications">
                 <template if:true={recordId}>
                     <c-portfolio-certificates record-id={recordId}></c-portfolio-certificates>
                 </template>
             </lightning-tab>
     
-            
+            <!-- Displays Others tab -->
             <lightning-tab label="Others">
                 <template if:true={recordId}>
                     <c-portfolio-other-details record-id={recordId}></c-portfolio-other-details>
@@ -49,6 +60,7 @@
    
 
     <div class="accordian-wrapper show-accordion-on-mobile-view">
+        <!-- Mobile view: Accordion for displaying content in sections -->
         <lightning-accordion allow-multiple-sections-open>
         <lightning-accordion-section name="Summary" label="Summary">
             <template if:true={recordId}>
@@ -97,4 +109,5 @@
         
     </lightning-accordion>
     </div>
+
 </template>
