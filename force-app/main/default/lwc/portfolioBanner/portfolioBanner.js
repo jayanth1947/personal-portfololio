@@ -1,5 +1,6 @@
 import { LightningElement, wire,api } from 'lwc';
 import PortfolioAssets from '@salesforce/resourceUrl/PortfolioAssets';
+import userPic from '@salesforce/resourceUrl/userPic';
 import { getRecord,getFieldValue } from 'lightning/uiRecordApi';
 import FULLNAME from '@salesforce/schema/Portfolio__c.FullName__c';
 import COMPANYLOCATION from '@salesforce/schema/Portfolio__c.CompanyLocation__c';
@@ -18,7 +19,8 @@ export default class PortfolioBanner extends LightningElement {
 
 
     // Define image URLs using Salesforce Static Resources
-    userPic=`${PortfolioAssets}/PortfolioAssets/userPic.jpeg`
+    //userPic=`${PortfolioAssets}/PortfolioAssets/userPic.jpeg`
+    userPicMain=`${userPic}/userPic.png`
     linkedin =`${PortfolioAssets}/PortfolioAssets/Social/linkedin.svg`
     twitter = `${PortfolioAssets}/PortfolioAssets/Social/twitter.svg`
     github =`${PortfolioAssets}/PortfolioAssets/Social/github.svg`
